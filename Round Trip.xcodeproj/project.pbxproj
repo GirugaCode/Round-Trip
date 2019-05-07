@@ -17,6 +17,7 @@
 		28BA30032282003900EF9070 /* Round_TripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA30022282003900EF9070 /* Round_TripUITests.swift */; };
 		28BA30142282044D00EF9070 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA30132282044D00EF9070 /* TripsTableViewCell.swift */; };
 		28BA3016228210FF00EF9070 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA3015228210FF00EF9070 /* AddTripViewController.swift */; };
+		28BA301822824E8800EF9070 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA301722824E8800EF9070 /* UINavigationController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		28BA30042282003900EF9070 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28BA30132282044D00EF9070 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 		28BA3015228210FF00EF9070 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
+		28BA301722824E8800EF9070 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				28BA2FEB2282003900EF9070 /* LaunchScreen.storyboard */,
 				28BA2FEE2282003900EF9070 /* Info.plist */,
 				28BA2FE62282003800EF9070 /* Round_Trip.xcdatamodeld */,
+				28BA301722824E8800EF9070 /* UINavigationController+Extension.swift */,
 			);
 			path = "Round Trip";
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				28BA2FE22282003800EF9070 /* TripsViewController.swift in Sources */,
 				28BA2FE82282003800EF9070 /* Round_Trip.xcdatamodeld in Sources */,
 				28BA2FE02282003800EF9070 /* AppDelegate.swift in Sources */,
+				28BA301822824E8800EF9070 /* UINavigationController+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

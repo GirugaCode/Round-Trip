@@ -30,7 +30,7 @@ class AddTripViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     let tripTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Your next Adventure!"
@@ -45,7 +45,6 @@ class AddTripViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         setupNavigationBar()
         setupAddTrip()
@@ -65,6 +64,9 @@ class AddTripViewController: UIViewController {
     
     @objc func addTrip() {
         print("Added the trip")
+        // Using the static dummyData to append w/e the text field would be
+        TripsViewController.dummyData.append(tripTextField.text!)
+        self.navigationController?.initRootViewController(vc: TripsViewController())
     }
     
     private func setupAddTrip() {

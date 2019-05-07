@@ -9,12 +9,13 @@
 import UIKit
 
 class TripsViewController: UIViewController {
-    private let dummyData = ["First","Second","Third"]
     
-    private var tripsTableView = UITableView()
+    var tripsTableView = UITableView()
+    
+    static var dummyData = ["First","Second","Third"]
     
     private let tableViewCellId = "TripsTableViewCell"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -53,16 +54,16 @@ class TripsViewController: UIViewController {
 extension TripsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Num: \(indexPath.row)")
-        print("Value: \(dummyData[indexPath.row])")
+        print("Value: \(TripsViewController.dummyData[indexPath.row])")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dummyData.count
+        return TripsViewController.dummyData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellId) as! TripsTableViewCell
-        cell.textLabel!.text = "\(dummyData[indexPath.row])"
+        cell.textLabel!.text = "\(TripsViewController.dummyData[indexPath.row])"
         return cell
         
     }
