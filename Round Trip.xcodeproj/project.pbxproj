@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		28BA2FE02282003800EF9070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA2FDF2282003800EF9070 /* AppDelegate.swift */; };
-		28BA2FE22282003800EF9070 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA2FE12282003800EF9070 /* ViewController.swift */; };
+		28BA2FE22282003800EF9070 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA2FE12282003800EF9070 /* TripsViewController.swift */; };
 		28BA2FE52282003800EF9070 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28BA2FE32282003800EF9070 /* Main.storyboard */; };
 		28BA2FE82282003800EF9070 /* Round_Trip.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28BA2FE62282003800EF9070 /* Round_Trip.xcdatamodeld */; };
 		28BA2FEA2282003900EF9070 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28BA2FE92282003900EF9070 /* Assets.xcassets */; };
 		28BA2FED2282003900EF9070 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28BA2FEB2282003900EF9070 /* LaunchScreen.storyboard */; };
 		28BA2FF82282003900EF9070 /* Round_TripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA2FF72282003900EF9070 /* Round_TripTests.swift */; };
 		28BA30032282003900EF9070 /* Round_TripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA30022282003900EF9070 /* Round_TripUITests.swift */; };
+		28BA30142282044D00EF9070 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA30132282044D00EF9070 /* TripsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,7 @@
 /* Begin PBXFileReference section */
 		28BA2FDC2282003800EF9070 /* Round Trip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Round Trip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BA2FDF2282003800EF9070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		28BA2FE12282003800EF9070 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28BA2FE12282003800EF9070 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		28BA2FE42282003800EF9070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28BA2FE72282003800EF9070 /* Round_Trip.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Round_Trip.xcdatamodel; sourceTree = "<group>"; };
 		28BA2FE92282003900EF9070 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		28BA2FFE2282003900EF9070 /* Round TripUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Round TripUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BA30022282003900EF9070 /* Round_TripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round_TripUITests.swift; sourceTree = "<group>"; };
 		28BA30042282003900EF9070 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28BA30132282044D00EF9070 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,10 @@
 		28BA2FDE2282003800EF9070 /* Round Trip */ = {
 			isa = PBXGroup;
 			children = (
+				28BA30122282013F00EF9070 /* Models */,
+				28BA30112282013D00EF9070 /* Views */,
+				28BA30102282013B00EF9070 /* Controllers */,
 				28BA2FDF2282003800EF9070 /* AppDelegate.swift */,
-				28BA2FE12282003800EF9070 /* ViewController.swift */,
-				28BA2FE32282003800EF9070 /* Main.storyboard */,
 				28BA2FE92282003900EF9070 /* Assets.xcassets */,
 				28BA2FEB2282003900EF9070 /* LaunchScreen.storyboard */,
 				28BA2FEE2282003900EF9070 /* Info.plist */,
@@ -126,6 +129,30 @@
 				28BA30042282003900EF9070 /* Info.plist */,
 			);
 			path = "Round TripUITests";
+			sourceTree = "<group>";
+		};
+		28BA30102282013B00EF9070 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				28BA2FE12282003800EF9070 /* TripsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		28BA30112282013D00EF9070 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				28BA2FE32282003800EF9070 /* Main.storyboard */,
+				28BA30132282044D00EF9070 /* TripsTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		28BA30122282013F00EF9070 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +286,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28BA2FE22282003800EF9070 /* ViewController.swift in Sources */,
+				28BA30142282044D00EF9070 /* TripsTableViewCell.swift in Sources */,
+				28BA2FE22282003800EF9070 /* TripsViewController.swift in Sources */,
 				28BA2FE82282003800EF9070 /* Round_Trip.xcdatamodeld in Sources */,
 				28BA2FE02282003800EF9070 /* AppDelegate.swift in Sources */,
 			);
