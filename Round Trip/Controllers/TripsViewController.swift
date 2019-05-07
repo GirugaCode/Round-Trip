@@ -19,6 +19,18 @@ class TripsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupTableView()
+        setupNavigationBar()
+    }
+    
+    private func setupNavigationBar() {
+        let addButton = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(self.addTrip))
+        self.navigationItem.rightBarButtonItem = addButton
+
+    }
+    
+    @objc func addTrip() {
+        let addTripsVC = AddTripViewController()
+        self.navigationController?.pushViewController(addTripsVC, animated: true)
     }
     
     private func setupTableView() {
@@ -54,7 +66,6 @@ extension TripsViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
         
     }
-    
-    
+
 }
 
