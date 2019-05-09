@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280082F42283AD5E00DD2759 /* NoWaypointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280082F32283AD5E00DD2759 /* NoWaypointsViewController.swift */; };
+		280082F62283AD8800DD2759 /* WaypointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280082F52283AD8800DD2759 /* WaypointsViewController.swift */; };
 		28BA2FE02282003800EF9070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA2FDF2282003800EF9070 /* AppDelegate.swift */; };
 		28BA2FE22282003800EF9070 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA2FE12282003800EF9070 /* TripsViewController.swift */; };
 		28BA2FE52282003800EF9070 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28BA2FE32282003800EF9070 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		280082F32283AD5E00DD2759 /* NoWaypointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoWaypointsViewController.swift; sourceTree = "<group>"; };
+		280082F52283AD8800DD2759 /* WaypointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointsViewController.swift; sourceTree = "<group>"; };
 		28BA2FDC2282003800EF9070 /* Round Trip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Round Trip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BA2FDF2282003800EF9070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28BA2FE12282003800EF9070 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 			children = (
 				28BA2FE12282003800EF9070 /* TripsViewController.swift */,
 				28BA3015228210FF00EF9070 /* AddTripViewController.swift */,
+				280082F32283AD5E00DD2759 /* NoWaypointsViewController.swift */,
+				280082F52283AD8800DD2759 /* WaypointsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -295,7 +301,9 @@
 				28BA3016228210FF00EF9070 /* AddTripViewController.swift in Sources */,
 				28BA30142282044D00EF9070 /* TripsTableViewCell.swift in Sources */,
 				28BA2FE22282003800EF9070 /* TripsViewController.swift in Sources */,
+				280082F42283AD5E00DD2759 /* NoWaypointsViewController.swift in Sources */,
 				28BA2FE82282003800EF9070 /* Round_Trip.xcdatamodeld in Sources */,
+				280082F62283AD8800DD2759 /* WaypointsViewController.swift in Sources */,
 				28BA2FE02282003800EF9070 /* AppDelegate.swift in Sources */,
 				28BA301822824E8800EF9070 /* UINavigationController+Extension.swift in Sources */,
 			);

@@ -16,6 +16,8 @@ class TripsViewController: UIViewController {
     
     private let tableViewCellId = "TripsTableViewCell"
     
+    var noWaypoint = NoWaypointsViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -53,8 +55,7 @@ class TripsViewController: UIViewController {
 
 extension TripsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Num: \(indexPath.row)")
-        print("Value: \(TripsViewController.dummyData[indexPath.row])")
+        self.navigationController?.pushViewController(noWaypoint, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

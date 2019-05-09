@@ -70,6 +70,7 @@ class AddTripViewController: UIViewController {
     }
     
     private func setupAddTrip() {
+        self.title = "Add Trip"
         self.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         self.view.addSubview(addTripFeature)
         
