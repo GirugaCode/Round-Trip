@@ -9,23 +9,23 @@
 import CoreData
 import UIKit
 
-class CorDataManager {
+class CoreDataManager {
     
     static let managedContext: NSManagedObjectContext = {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             fatalError()
         }
+        
         let persistanceContainer = appDelegate.persistentContainer
         let context = persistanceContainer.viewContext
         return context
     }()
     
-    class func addTrip(sender: Notification) {
-        let entity = NSEntityDescription.entity(forEntityName: "Trips", in: managedContext)!
-        let trip = NSManagedObject(entity: entity, insertInto: managedContext)
-        trip.setValue(sender.object, forKey: "tripName")
+    class func addTrip() -> Trips {
         
-        saveTrip()
+        let newTrip = NSEntityDescription.insertNewObject(forEntityName: "Trips", into: managedContext) as! Trips
+        
+        return newTrip
     }
     
     class func saveTrip() {

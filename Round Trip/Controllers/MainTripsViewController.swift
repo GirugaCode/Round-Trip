@@ -9,19 +9,21 @@
 /* The initial View Controller for viewing all of the trips you currently have.*/
 
 import UIKit
+import CoreData
 
 class MainTripsViewController: UIViewController {
     
     var tripsTableView = UITableView()
     
-    static var dummyData = ["First","Second","Third"]
-    
-    private let tableViewCellId = "TripsTableViewCell"
-    
-    var noWaypoint = NoWaypointsViewController()
+    var tripNames = [Trips]() {
+        didSet {
+            tripsTableView.reloadData()
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        tripNames = CoreDataManager.getTrips()
     }
     
     override func viewDidLoad() {
@@ -51,7 +53,7 @@ class MainTripsViewController: UIViewController {
         
         self.title = "Planned Trips"
         
-        tripsTableView.register(TripsTableViewCell.self, forCellReuseIdentifier: tableViewCellId)
+        tripsTableView.register(TripsTableViewCell.self, forCellReuseIdentifier: TripsTableViewCell.tableViewCellId)
         tripsTableView.dataSource = self
         tripsTableView.delegate = self
         self.view.addSubview(tripsTableView)
@@ -60,19 +62,31 @@ class MainTripsViewController: UIViewController {
 }
 
 extension MainTripsViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(noWaypoint, animated: true)
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return MainTripsViewController.dummyData.count
+        return tripNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellId) as! TripsTableViewCell
-        cell.textLabel!.text = "\(MainTripsViewController.dummyData[indexPath.row])"
-        return cell
+        let tripCell = tripsTableView.dequeueReusableCell(withIdentifier: TripsTableViewCell.tableViewCellId, for: indexPath) as! TripsTableViewCell
         
+        let currentTrip = tripNames[indexPath.row]
+        tripCell.tripLabel.text = currentTrip.tripName
+        
+        return tripCell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.navigationController?.pushViewController(NoWaypointsViewController(), animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let selectedTrip = self.tripNames[indexPath.row]
+            CoreDataManager.deleteTrip(trip: selectedTrip)
+            tripsTableView.reloadData()
+        }
     }
 
 }

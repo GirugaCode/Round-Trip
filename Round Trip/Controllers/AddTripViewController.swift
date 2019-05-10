@@ -63,8 +63,6 @@ class AddTripViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupNavigationBar()
         setupAddTrip()
-        
-        
     }
 
     private func setupNavigationBar() {
@@ -81,12 +79,16 @@ class AddTripViewController: UIViewController {
     
     @objc func addTrip() {
         // Checks if the text field is empty
-        guard let text = tripTextField.text, !text.isEmpty else {
+        guard let tripText = tripTextField.text, !tripText.isEmpty else {
             emptyTrip.isHidden = false
             return
         }
-        // Using the static dummyData to append w/e the text field would be
-        MainTripsViewController.dummyData.append(text)
+        
+        // Saving the created Trip Name
+        let trip = CoreDataManager.addTrip()
+        trip.tripName = tripText
+        CoreDataManager.saveTrip()
+
         self.navigationController?.initRootViewController(vc: MainTripsViewController())
     }
     
