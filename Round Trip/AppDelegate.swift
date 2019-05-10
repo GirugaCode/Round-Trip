@@ -6,8 +6,10 @@
 //  Copyright © 2019 Danh Phu Nguyen. All rights reserved.
 //
 
-import UIKit
 import CoreData
+import GooglePlaces
+import UIKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Google Places API
+        GMSPlacesClient.provideAPIKey(Constants.apiKey)
+        
+        // Setting the view programmatically
         window = UIWindow(frame: UIScreen.main.bounds)
         let initialVewController = TripsViewController()
         let navigationController = UINavigationController(rootViewController: initialVewController)

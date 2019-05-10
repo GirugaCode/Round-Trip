@@ -4,7 +4,7 @@
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
- 
+
 ## Build generated
 build/
 DerivedData/
@@ -68,6 +68,7 @@ fastlane/test_output
 ## Various settings
  
 ## Other
+Constants.swift
  
 ### Xcode Patch ###
 *.xcodeproj/*

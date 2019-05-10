@@ -6,6 +6,9 @@
 //  Copyright © 2019 Danh Phu Nguyen. All rights reserved.
 //
 
+/* The View Controller for adding new trips .*/
+
+
 import UIKit
 
 class AddTripViewController: UIViewController {
@@ -72,17 +75,17 @@ class AddTripViewController: UIViewController {
     }
     
     @objc func cancelAdd() {
-        print("Cancel")
+        // Pops to previous controller
         self.navigationController?.popViewController(animated: true)
     }
     
     @objc func addTrip() {
-        print("Added the trip")
-        // Using the static dummyData to append w/e the text field would be
+        // Checks if the text field is empty
         guard let text = tripTextField.text, !text.isEmpty else {
             emptyTrip.isHidden = false
             return
         }
+        // Using the static dummyData to append w/e the text field would be
         TripsViewController.dummyData.append(text)
         self.navigationController?.initRootViewController(vc: TripsViewController())
     }

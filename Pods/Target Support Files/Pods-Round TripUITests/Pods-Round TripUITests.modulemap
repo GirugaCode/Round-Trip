@@ -1,0 +1,6 @@
+framework module Pods_Round_TripUITests {
+  umbrella header "Pods-Round TripUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -6,6 +6,10 @@
 //  Copyright © 2019 Danh Phu Nguyen. All rights reserved.
 //
 
+/* The View Controller to display to the user that
+ there are no waypoints in the selected trip*/
+
+
 import UIKit
 
 class NoWaypointsViewController: UIViewController {

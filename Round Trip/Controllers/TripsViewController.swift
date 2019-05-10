@@ -6,6 +6,8 @@
 //  Copyright © 2019 Danh Phu Nguyen. All rights reserved.
 //
 
+/* The initial View Controller for viewing all of the trips you currently have.*/
+
 import UIKit
 
 class TripsViewController: UIViewController {

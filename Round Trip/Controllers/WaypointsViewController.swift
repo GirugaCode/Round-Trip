@@ -6,6 +6,8 @@
 //  Copyright © 2019 Danh Phu Nguyen. All rights reserved.
 //
 
+/* The View Controller to display all the Waypoints your trip currently has.*/
+
 import UIKit
 
 class WaypointsViewController: UIViewController {

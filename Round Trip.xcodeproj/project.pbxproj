@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		280082F42283AD5E00DD2759 /* NoWaypointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280082F32283AD5E00DD2759 /* NoWaypointsViewController.swift */; };
 		280082F62283AD8800DD2759 /* WaypointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280082F52283AD8800DD2759 /* WaypointsViewController.swift */; };
+		280082F82284FD8D00DD2759 /* AddWaypointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280082F72284FD8D00DD2759 /* AddWaypointsViewController.swift */; };
+		280082FA2285117200DD2759 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280082F92285117200DD2759 /* Constants.swift */; };
 		28BA2FE02282003800EF9070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA2FDF2282003800EF9070 /* AppDelegate.swift */; };
 		28BA2FE22282003800EF9070 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA2FE12282003800EF9070 /* TripsViewController.swift */; };
 		28BA2FE52282003800EF9070 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28BA2FE32282003800EF9070 /* Main.storyboard */; };
@@ -20,6 +22,9 @@
 		28BA30142282044D00EF9070 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA30132282044D00EF9070 /* TripsTableViewCell.swift */; };
 		28BA3016228210FF00EF9070 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA3015228210FF00EF9070 /* AddTripViewController.swift */; };
 		28BA301822824E8800EF9070 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA301722824E8800EF9070 /* UINavigationController+Extension.swift */; };
+		379558CBBD726CEF1724A531 /* Pods_Round_TripUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAEEF823A98348A9B187A37 /* Pods_Round_TripUITests.framework */; };
+		5BABC9C955FF90CD40A25CDC /* Pods_Round_Trip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F2004B5C81BB01B857DFB7 /* Pods_Round_Trip.framework */; };
+		5F197000717BAEE515B75D19 /* Pods_Round_TripTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC134DEED36953CA96FF6B8 /* Pods_Round_TripTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AAEEF823A98348A9B187A37 /* Pods_Round_TripUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Round_TripUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23F2004B5C81BB01B857DFB7 /* Pods_Round_Trip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Round_Trip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		280082F32283AD5E00DD2759 /* NoWaypointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoWaypointsViewController.swift; sourceTree = "<group>"; };
 		280082F52283AD8800DD2759 /* WaypointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointsViewController.swift; sourceTree = "<group>"; };
+		280082F72284FD8D00DD2759 /* AddWaypointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWaypointsViewController.swift; sourceTree = "<group>"; };
+		280082F92285117200DD2759 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		28BA2FDC2282003800EF9070 /* Round Trip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Round Trip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BA2FDF2282003800EF9070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28BA2FE12282003800EF9070 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +68,13 @@
 		28BA30132282044D00EF9070 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 		28BA3015228210FF00EF9070 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		28BA301722824E8800EF9070 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		70647C87B773CAB100451C4E /* Pods-Round TripTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Round TripTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Round TripTests/Pods-Round TripTests.debug.xcconfig"; sourceTree = "<group>"; };
+		742690F74CB021E3A3CE501E /* Pods-Round TripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Round TripTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Round TripTests/Pods-Round TripTests.release.xcconfig"; sourceTree = "<group>"; };
+		B016A0EC76B691D7E8E88858 /* Pods-Round Trip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Round Trip.release.xcconfig"; path = "Pods/Target Support Files/Pods-Round Trip/Pods-Round Trip.release.xcconfig"; sourceTree = "<group>"; };
+		BF21C3DF864CBC5BFCEFD44B /* Pods-Round TripUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Round TripUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Round TripUITests/Pods-Round TripUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CBC134DEED36953CA96FF6B8 /* Pods_Round_TripTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Round_TripTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6429D83EF948CCAA76623BB /* Pods-Round TripUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Round TripUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Round TripUITests/Pods-Round TripUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FE15AE4E398CF326070787F6 /* Pods-Round Trip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Round Trip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Round Trip/Pods-Round Trip.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BABC9C955FF90CD40A25CDC /* Pods_Round_Trip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F197000717BAEE515B75D19 /* Pods_Round_TripTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +98,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				379558CBBD726CEF1724A531 /* Pods_Round_TripUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		113808A17B691921E8976F4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23F2004B5C81BB01B857DFB7 /* Pods_Round_Trip.framework */,
+				CBC134DEED36953CA96FF6B8 /* Pods_Round_TripTests.framework */,
+				0AAEEF823A98348A9B187A37 /* Pods_Round_TripUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		28BA2FD32282003800EF9070 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +122,8 @@
 				28BA2FF62282003900EF9070 /* Round TripTests */,
 				28BA30012282003900EF9070 /* Round TripUITests */,
 				28BA2FDD2282003800EF9070 /* Products */,
+				5A523A7EF7A052599076B6F4 /* Pods */,
+				113808A17B691921E8976F4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +149,7 @@
 				28BA2FEE2282003900EF9070 /* Info.plist */,
 				28BA2FE62282003800EF9070 /* Round_Trip.xcdatamodeld */,
 				28BA301722824E8800EF9070 /* UINavigationController+Extension.swift */,
+				280082F92285117200DD2759 /* Constants.swift */,
 			);
 			path = "Round Trip";
 			sourceTree = "<group>";
@@ -147,6 +179,7 @@
 				28BA3015228210FF00EF9070 /* AddTripViewController.swift */,
 				280082F32283AD5E00DD2759 /* NoWaypointsViewController.swift */,
 				280082F52283AD8800DD2759 /* WaypointsViewController.swift */,
+				280082F72284FD8D00DD2759 /* AddWaypointsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -167,6 +200,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5A523A7EF7A052599076B6F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE15AE4E398CF326070787F6 /* Pods-Round Trip.debug.xcconfig */,
+				B016A0EC76B691D7E8E88858 /* Pods-Round Trip.release.xcconfig */,
+				70647C87B773CAB100451C4E /* Pods-Round TripTests.debug.xcconfig */,
+				742690F74CB021E3A3CE501E /* Pods-Round TripTests.release.xcconfig */,
+				BF21C3DF864CBC5BFCEFD44B /* Pods-Round TripUITests.debug.xcconfig */,
+				F6429D83EF948CCAA76623BB /* Pods-Round TripUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,9 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28BA30072282003900EF9070 /* Build configuration list for PBXNativeTarget "Round Trip" */;
 			buildPhases = (
+				1D8E2D01BF2A5D5135DCA562 /* [CP] Check Pods Manifest.lock */,
 				28BA2FD82282003800EF9070 /* Sources */,
 				28BA2FD92282003800EF9070 /* Frameworks */,
 				28BA2FDA2282003800EF9070 /* Resources */,
+				3AA886782CD2F4AB3C8D02FF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,6 +239,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28BA300A2282003900EF9070 /* Build configuration list for PBXNativeTarget "Round TripTests" */;
 			buildPhases = (
+				92E18B3FC384BD8AAF6F8B25 /* [CP] Check Pods Manifest.lock */,
 				28BA2FEF2282003900EF9070 /* Sources */,
 				28BA2FF02282003900EF9070 /* Frameworks */,
 				28BA2FF12282003900EF9070 /* Resources */,
@@ -209,6 +258,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28BA300D2282003900EF9070 /* Build configuration list for PBXNativeTarget "Round TripUITests" */;
 			buildPhases = (
+				092496A3D311DDD4144E1F10 /* [CP] Check Pods Manifest.lock */,
 				28BA2FFA2282003900EF9070 /* Sources */,
 				28BA2FFB2282003900EF9070 /* Frameworks */,
 				28BA2FFC2282003900EF9070 /* Resources */,
@@ -293,6 +343,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		092496A3D311DDD4144E1F10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Round TripUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D8E2D01BF2A5D5135DCA562 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Round Trip-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3AA886782CD2F4AB3C8D02FF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Round Trip/Pods-Round Trip-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Round Trip/Pods-Round Trip-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92E18B3FC384BD8AAF6F8B25 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Round TripTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		28BA2FD82282003800EF9070 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -300,8 +443,10 @@
 			files = (
 				28BA3016228210FF00EF9070 /* AddTripViewController.swift in Sources */,
 				28BA30142282044D00EF9070 /* TripsTableViewCell.swift in Sources */,
+				280082F82284FD8D00DD2759 /* AddWaypointsViewController.swift in Sources */,
 				28BA2FE22282003800EF9070 /* TripsViewController.swift in Sources */,
 				280082F42283AD5E00DD2759 /* NoWaypointsViewController.swift in Sources */,
+				280082FA2285117200DD2759 /* Constants.swift in Sources */,
 				28BA2FE82282003800EF9070 /* Round_Trip.xcdatamodeld in Sources */,
 				280082F62283AD8800DD2759 /* WaypointsViewController.swift in Sources */,
 				28BA2FE02282003800EF9070 /* AppDelegate.swift in Sources */,
@@ -478,6 +623,7 @@
 		};
 		28BA30082282003900EF9070 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE15AE4E398CF326070787F6 /* Pods-Round Trip.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -496,6 +642,7 @@
 		};
 		28BA30092282003900EF9070 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B016A0EC76B691D7E8E88858 /* Pods-Round Trip.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -514,6 +661,7 @@
 		};
 		28BA300B2282003900EF9070 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70647C87B773CAB100451C4E /* Pods-Round TripTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -535,6 +683,7 @@
 		};
 		28BA300C2282003900EF9070 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 742690F74CB021E3A3CE501E /* Pods-Round TripTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -556,6 +705,7 @@
 		};
 		28BA300E2282003900EF9070 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF21C3DF864CBC5BFCEFD44B /* Pods-Round TripUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -576,6 +726,7 @@
 		};
 		28BA300F2282003900EF9070 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6429D83EF948CCAA76623BB /* Pods-Round TripUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
