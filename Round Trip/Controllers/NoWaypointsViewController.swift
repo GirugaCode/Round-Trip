@@ -14,6 +14,8 @@ import UIKit
 
 class NoWaypointsViewController: UIViewController {
     
+    let addWaypointsVC = AddWaypointsViewController()
+    
     private lazy var addWaypoint: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [noTripMessage, getStartedButton])
         stackView.alignment = .fill
@@ -48,7 +50,7 @@ class NoWaypointsViewController: UIViewController {
     }()
     
     @objc func startWaypoints() {
-        print("Start adding Way Points")
+        navigationController?.pushViewController(addWaypointsVC, animated: true)
     }
     
     override func viewDidLoad() {

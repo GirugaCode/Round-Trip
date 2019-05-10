@@ -115,6 +115,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		280082FB2285147000DD2759 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				280082F92285117200DD2759 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		28BA2FD32282003800EF9070 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +148,7 @@
 		28BA2FDE2282003800EF9070 /* Round Trip */ = {
 			isa = PBXGroup;
 			children = (
+				280082FB2285147000DD2759 /* Constants */,
 				28BA30122282013F00EF9070 /* Models */,
 				28BA30112282013D00EF9070 /* Views */,
 				28BA30102282013B00EF9070 /* Controllers */,
@@ -149,7 +158,6 @@
 				28BA2FEE2282003900EF9070 /* Info.plist */,
 				28BA2FE62282003800EF9070 /* Round_Trip.xcdatamodeld */,
 				28BA301722824E8800EF9070 /* UINavigationController+Extension.swift */,
-				280082F92285117200DD2759 /* Constants.swift */,
 			);
 			path = "Round Trip";
 			sourceTree = "<group>";
