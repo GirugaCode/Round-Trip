@@ -31,14 +31,31 @@ class AddWaypointsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setupMap()
+        setupSearchBar()
+    }
+    
+    private func setupMap() {
+        self.title = "Add Waypoint"
+        view.addSubview(waypointMap)
         
+        NSLayoutConstraint.activate([
+            waypointMap.topAnchor.constraint(equalTo: view.topAnchor),
+            waypointMap.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            waypointMap.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            waypointMap.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ])
+    }
+    
+    private func setupSearchBar() {
         resultsViewController = GMSAutocompleteResultsViewController()
         resultsViewController?.delegate = self
         
         searchController = UISearchController(searchResultsController: resultsViewController)
         searchController?.searchResultsUpdater = resultsViewController
         
-        let subView = UIView(frame: CGRect(x: 0, y: 90.0, width: 350.0, height: 45.0))
+        let subView = UIView(frame: CGRect(x: 0, y: 88.0, width: 350.0, height: 45.0))
         
         subView.addSubview((searchController?.searchBar)!)
         waypointMap.addSubview(subView)
@@ -53,20 +70,6 @@ class AddWaypointsViewController: UIViewController {
         // Adjust the view placement down.
         self.extendedLayoutIncludesOpaqueBars = true
         self.edgesForExtendedLayout = .top
-        
-        setupMap()
-    }
-    
-    private func setupMap() {
-        self.title = "Add Waypoint"
-        view.addSubview(waypointMap)
-        
-        NSLayoutConstraint.activate([
-            waypointMap.topAnchor.constraint(equalTo: view.topAnchor),
-            waypointMap.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            waypointMap.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            waypointMap.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-            ])
     }
 
 }
