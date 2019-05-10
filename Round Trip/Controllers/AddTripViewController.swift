@@ -86,8 +86,8 @@ class AddTripViewController: UIViewController {
             return
         }
         // Using the static dummyData to append w/e the text field would be
-        TripsViewController.dummyData.append(text)
-        self.navigationController?.initRootViewController(vc: TripsViewController())
+        MainTripsViewController.dummyData.append(text)
+        self.navigationController?.initRootViewController(vc: MainTripsViewController())
     }
     
     private func setupAddTrip() {

@@ -10,7 +10,7 @@
 
 import UIKit
 
-class TripsViewController: UIViewController {
+class MainTripsViewController: UIViewController {
     
     var tripsTableView = UITableView()
     
@@ -19,6 +19,10 @@ class TripsViewController: UIViewController {
     private let tableViewCellId = "TripsTableViewCell"
     
     var noWaypoint = NoWaypointsViewController()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,18 +59,18 @@ class TripsViewController: UIViewController {
 
 }
 
-extension TripsViewController: UITableViewDelegate, UITableViewDataSource {
+extension MainTripsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.navigationController?.pushViewController(noWaypoint, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return TripsViewController.dummyData.count
+        return MainTripsViewController.dummyData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellId) as! TripsTableViewCell
-        cell.textLabel!.text = "\(TripsViewController.dummyData[indexPath.row])"
+        cell.textLabel!.text = "\(MainTripsViewController.dummyData[indexPath.row])"
         return cell
         
     }

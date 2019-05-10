@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Setting the view programmatically
         window = UIWindow(frame: UIScreen.main.bounds)
-        let initialVewController = TripsViewController()
+        let initialVewController = MainTripsViewController()
         let navigationController = UINavigationController(rootViewController: initialVewController)
         window!.rootViewController = navigationController
         window!.makeKeyAndVisible()
