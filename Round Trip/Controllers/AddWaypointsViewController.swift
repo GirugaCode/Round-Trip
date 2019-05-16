@@ -18,6 +18,13 @@ class AddWaypointsViewController: UIViewController {
     var searchController: UISearchController?
     var resultView: UITextView?
     
+    var currentTrip: Trips?
+    
+    // Keeps track of the waypoint location and name
+    var placeName: String = ""
+    var waypointLat: Double = 0
+    var waypointLong: Double = 0
+    
     private let waypointMap: MKMapView = {
         let mapView = MKMapView()
         mapView.mapType = MKMapType.standard
@@ -34,6 +41,7 @@ class AddWaypointsViewController: UIViewController {
 
         setupMap()
         setupSearchBar()
+        setupNavigationBar()
     }
     
     private func setupMap() {
@@ -46,6 +54,29 @@ class AddWaypointsViewController: UIViewController {
             waypointMap.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             waypointMap.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             ])
+    }
+    
+    private func setupNavigationBar() {
+        self.title = "Add Waypoint"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveWaypoint))
+    }
+    
+    @objc func saveWaypoint() {
+        if waypointMap.annotations.count == 0 {
+            print("No annotations saved")
+        } else {
+            let waypoint = Waypoints(context: CoreDataManager.managedContext)
+            waypoint.waypointName = placeName
+            waypoint.lat = waypointLat
+            waypoint.lon = waypointLong
+            
+            currentTrip?.addToWaypoint(waypoint)
+            CoreDataManager.saveTrip()
+            
+            navigationController?.popViewController(animated: true)
+        }
+        
+        
     }
     
     private func setupSearchBar() {
@@ -87,6 +118,10 @@ extension AddWaypointsViewController: GMSAutocompleteResultsViewControllerDelega
         print("Place name: \(place.name)")
         print("Place address: \(place.formattedAddress)")
         print("Place attributions: \(place.attributions)")
+        
+        placeName = place.name!
+        waypointLat = place.coordinate.latitude
+        waypointLong = place.coordinate.longitude
         
         let mapSpan = MKCoordinateSpan(latitudeDelta: 0.10, longitudeDelta: 0.10)
         let region = MKCoordinateRegion(center: place.coordinate, span: mapSpan)

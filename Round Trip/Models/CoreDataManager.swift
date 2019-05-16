@@ -24,7 +24,7 @@ class CoreDataManager {
     class func addTrip() -> Trips {
         
         let newTrip = NSEntityDescription.insertNewObject(forEntityName: "Trips", into: managedContext) as! Trips
-        
+        saveTrip()
         return newTrip
     }
     
@@ -45,6 +45,7 @@ class CoreDataManager {
         do {
             let fetchRequests = NSFetchRequest<Trips>(entityName: "Trips")
             let results = try managedContext.fetch(fetchRequests)
+            print("Results:",results)
             return results
         } catch let error {
             print("Unable to fetch data \(error.localizedDescription)")

@@ -14,7 +14,7 @@ import UIKit
 
 class NoWaypointsViewController: UIViewController {
     
-    let addWaypointsVC = AddWaypointsViewController()
+    var allTrips: Trips?
     
     private lazy var addWaypoint: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [noTripMessage, getStartedButton])
@@ -50,6 +50,8 @@ class NoWaypointsViewController: UIViewController {
     }()
     
     @objc func startWaypoints() {
+        let addWaypointsVC = AddWaypointsViewController()
+        addWaypointsVC.currentTrip = allTrips
         navigationController?.pushViewController(addWaypointsVC, animated: true)
     }
     
