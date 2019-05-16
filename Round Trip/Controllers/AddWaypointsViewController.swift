@@ -87,6 +87,17 @@ extension AddWaypointsViewController: GMSAutocompleteResultsViewControllerDelega
         print("Place name: \(place.name)")
         print("Place address: \(place.formattedAddress)")
         print("Place attributions: \(place.attributions)")
+        
+        let mapSpan = MKCoordinateSpan(latitudeDelta: 0.10, longitudeDelta: 0.10)
+        let region = MKCoordinateRegion(center: place.coordinate, span: mapSpan)
+        
+        waypointMap.setRegion(region, animated: true)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = place.coordinate
+        annotation.title = place.name
+        annotation.subtitle = place.formattedAddress
+        waypointMap.addAnnotation(annotation)
     }
     
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
