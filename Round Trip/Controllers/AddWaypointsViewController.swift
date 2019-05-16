@@ -14,6 +14,7 @@ import UIKit
 
 class AddWaypointsViewController: UIViewController {
     
+    // Google Places API
     var resultsViewController: GMSAutocompleteResultsViewController?
     var searchController: UISearchController?
     var resultView: UITextView?
@@ -72,10 +73,9 @@ class AddWaypointsViewController: UIViewController {
             
             currentTrip?.addToWaypoint(waypoint)
             CoreDataManager.saveTrip()
-            
             navigationController?.popViewController(animated: true)
+            
         }
-        
         
     }
     
@@ -114,10 +114,6 @@ extension AddWaypointsViewController: GMSAutocompleteResultsViewControllerDelega
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
                            didAutocompleteWith place: GMSPlace) {
         searchController?.isActive = false
-        // Do something with the selected place.
-        print("Place name: \(place.name)")
-        print("Place address: \(place.formattedAddress)")
-        print("Place attributions: \(place.attributions)")
         
         placeName = place.name!
         waypointLat = place.coordinate.latitude

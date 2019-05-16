@@ -21,6 +21,11 @@ class WaypointsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         setupTableView()
+        setupNavigationBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        waypointTableView.reloadData()
     }
     
     private func setupTableView() {
@@ -30,12 +35,25 @@ class WaypointsViewController: UIViewController {
         
         waypointTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
         
-        self.title = "Way Points"
+        self.title = "Trip to: \(allTrips?.tripName ?? "Best Trip Ever!")"
         
         waypointTableView.register(WaypointsTableViewCell.self, forCellReuseIdentifier: WaypointsTableViewCell.tableViewCellId)
         waypointTableView.dataSource = self
         waypointTableView.delegate = self
         self.view.addSubview(waypointTableView)
+    }
+    
+    private func setupNavigationBar() {
+        let addButton = UIBarButtonItem(title: "Add Waypoint", style: .plain, target: self, action: #selector(self.addTrip))
+        self.navigationItem.rightBarButtonItem = addButton
+        
+    }
+    
+    @objc func addTrip() {
+        let addWaypointsVC = AddWaypointsViewController()
+        guard let unwrappedTrip = self.allTrips else { return }
+        addWaypointsVC.currentTrip = unwrappedTrip
+        self.navigationController?.pushViewController(addWaypointsVC, animated: true)
     }
 }
 
@@ -49,6 +67,30 @@ extension WaypointsViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: WaypointsTableViewCell.tableViewCellId, for: indexPath)
         cell.textLabel?.text = displayWaypoints?.waypointName
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let displayWaypointVC = DisplayWaypointViewController()
+        let selectedWaypoint = allTrips?.waypoint?[indexPath.row] as? Waypoints
+        displayWaypointVC.name = selectedWaypoint?.waypointName
+        displayWaypointVC.lat = selectedWaypoint?.lat
+        displayWaypointVC.lon = selectedWaypoint?.lon
+        navigationController?.pushViewController(displayWaypointVC, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
+        
+        let label = UILabel()
+        label.frame = CGRect.init(x: 5, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
+        label.text = allTrips?.tripName
+        
+        headerView.addSubview(label)
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 180
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
