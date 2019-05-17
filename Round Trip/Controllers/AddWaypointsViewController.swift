@@ -12,7 +12,13 @@ import GooglePlaces
 import MapKit
 import UIKit
 
+protocol SetupWaypointInfo {
+    func pushTable()
+}
+
 class AddWaypointsViewController: UIViewController {
+    
+    var delegate: SetupWaypointInfo?
     
     // Google Places API
     var resultsViewController: GMSAutocompleteResultsViewController?
@@ -73,6 +79,7 @@ class AddWaypointsViewController: UIViewController {
             
             currentTrip?.addToWaypoint(waypoint)
             CoreDataManager.saveTrip()
+            delegate?.pushTable()
             navigationController?.popViewController(animated: true)
             
         }
@@ -80,6 +87,7 @@ class AddWaypointsViewController: UIViewController {
     }
     
     private func setupSearchBar() {
+        // Google Places API Search Bar
         resultsViewController = GMSAutocompleteResultsViewController()
         resultsViewController?.delegate = self
         

@@ -12,23 +12,29 @@ import UIKit
 
 class WaypointsViewController: UIViewController {
     
+    // MARK: Initalizers
     var allTrips: Trips?
-    
     var waypointTableView = UITableView()
-
+    var emptyView = EmptyWaypointView(frame: UIScreen.main.bounds)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        setupTableView()
+        setupViewChoice()
         setupNavigationBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        setupViewChoice()
         waypointTableView.reloadData()
     }
     
+    
     private func setupTableView() {
+        // Sets up the Table View
+        emptyView.removeFromSuperview()
+        
         let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
         let displayWidth: CGFloat = self.view.frame.width
         let displayHeight: CGFloat = self.view.frame.height
@@ -44,16 +50,48 @@ class WaypointsViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
+        // Setup Navigation Bar
         let addButton = UIBarButtonItem(title: "Add Waypoint", style: .plain, target: self, action: #selector(self.addTrip))
         self.navigationItem.rightBarButtonItem = addButton
-        
+    }
+    
+    private func setupEmptyView() {
+        // Sets up the empty view with the get started action
+        if waypointTableView.superview == self.view {
+            waypointTableView.removeFromSuperview()
+        }
+        view.addSubview(emptyView)
+        NSLayoutConstraint.activate([
+            emptyView.topAnchor.constraint(equalTo: view.topAnchor),
+            emptyView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            emptyView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            emptyView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            ])
+    }
+
+    private func setupViewChoice() {
+        // Choses which View to show based on waypoints
+        if allTrips?.waypoint?.count == 0 {
+            emptyView.getStartedButton.addTarget(self, action: #selector(startWaypoints), for: .touchUpInside)
+            setupEmptyView()
+        } else {
+            setupTableView()
+        }
     }
     
     @objc func addTrip() {
         let addWaypointsVC = AddWaypointsViewController()
         guard let unwrappedTrip = self.allTrips else { return }
         addWaypointsVC.currentTrip = unwrappedTrip
+        addWaypointsVC.delegate = self
         self.navigationController?.pushViewController(addWaypointsVC, animated: true)
+    }
+    
+    @objc func startWaypoints() {
+        let addWaypointsVC = AddWaypointsViewController()
+        addWaypointsVC.currentTrip = allTrips
+        addWaypointsVC.delegate = self
+        navigationController?.pushViewController(addWaypointsVC, animated: true)
     }
 }
 
@@ -102,4 +140,11 @@ extension WaypointsViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+}
+
+// Protocal to pass in data for waypoints
+extension WaypointsViewController: SetupWaypointInfo {
+    func pushTable() {
+        setupViewChoice()
+    }
 }

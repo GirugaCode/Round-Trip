@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		280082F42283AD5E00DD2759 /* NoWaypointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280082F32283AD5E00DD2759 /* NoWaypointsViewController.swift */; };
 		280082F62283AD8800DD2759 /* WaypointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280082F52283AD8800DD2759 /* WaypointsViewController.swift */; };
 		280082F82284FD8D00DD2759 /* AddWaypointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280082F72284FD8D00DD2759 /* AddWaypointsViewController.swift */; };
 		280082FA2285117200DD2759 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280082F92285117200DD2759 /* Constants.swift */; };
@@ -19,6 +18,7 @@
 		2826AD18228CFE5B00EC69C7 /* WaypointsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2826AD17228CFE5B00EC69C7 /* WaypointsTableViewCell.swift */; };
 		2826AD1A228D20F600EC69C7 /* DisplayWaypointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2826AD19228D20F600EC69C7 /* DisplayWaypointViewController.swift */; };
 		2826AD1C228D289D00EC69C7 /* WaypointTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2826AD1B228D289D00EC69C7 /* WaypointTableHeaderView.swift */; };
+		289362A3228E318800F211FC /* EmptyWaypointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289362A2228E318800F211FC /* EmptyWaypointView.swift */; };
 		28BA2FE02282003800EF9070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA2FDF2282003800EF9070 /* AppDelegate.swift */; };
 		28BA2FE22282003800EF9070 /* MainTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BA2FE12282003800EF9070 /* MainTripsViewController.swift */; };
 		28BA2FE52282003800EF9070 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28BA2FE32282003800EF9070 /* Main.storyboard */; };
@@ -55,7 +55,6 @@
 /* Begin PBXFileReference section */
 		0AAEEF823A98348A9B187A37 /* Pods_Round_TripUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Round_TripUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F2004B5C81BB01B857DFB7 /* Pods_Round_Trip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Round_Trip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		280082F32283AD5E00DD2759 /* NoWaypointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoWaypointsViewController.swift; sourceTree = "<group>"; };
 		280082F52283AD8800DD2759 /* WaypointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointsViewController.swift; sourceTree = "<group>"; };
 		280082F72284FD8D00DD2759 /* AddWaypointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWaypointsViewController.swift; sourceTree = "<group>"; };
 		280082F92285117200DD2759 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		2826AD17228CFE5B00EC69C7 /* WaypointsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointsTableViewCell.swift; sourceTree = "<group>"; };
 		2826AD19228D20F600EC69C7 /* DisplayWaypointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayWaypointViewController.swift; sourceTree = "<group>"; };
 		2826AD1B228D289D00EC69C7 /* WaypointTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointTableHeaderView.swift; sourceTree = "<group>"; };
+		289362A2228E318800F211FC /* EmptyWaypointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyWaypointView.swift; sourceTree = "<group>"; };
 		28BA2FDC2282003800EF9070 /* Round Trip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Round Trip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BA2FDF2282003800EF9070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28BA2FE12282003800EF9070 /* MainTripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTripsViewController.swift; sourceTree = "<group>"; };
@@ -209,7 +209,6 @@
 			children = (
 				28BA2FE12282003800EF9070 /* MainTripsViewController.swift */,
 				28BA3015228210FF00EF9070 /* AddTripViewController.swift */,
-				280082F32283AD5E00DD2759 /* NoWaypointsViewController.swift */,
 				280082F52283AD8800DD2759 /* WaypointsViewController.swift */,
 				280082F72284FD8D00DD2759 /* AddWaypointsViewController.swift */,
 				2826AD19228D20F600EC69C7 /* DisplayWaypointViewController.swift */,
@@ -224,6 +223,7 @@
 				28BA30132282044D00EF9070 /* TripsTableViewCell.swift */,
 				2826AD17228CFE5B00EC69C7 /* WaypointsTableViewCell.swift */,
 				2826AD1B228D289D00EC69C7 /* WaypointTableHeaderView.swift */,
+				289362A2228E318800F211FC /* EmptyWaypointView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -488,11 +488,11 @@
 				2800830E22853CD600DD2759 /* CoreDataManager.swift in Sources */,
 				280082F82284FD8D00DD2759 /* AddWaypointsViewController.swift in Sources */,
 				28BA2FE22282003800EF9070 /* MainTripsViewController.swift in Sources */,
-				280082F42283AD5E00DD2759 /* NoWaypointsViewController.swift in Sources */,
 				280082FA2285117200DD2759 /* Constants.swift in Sources */,
 				2826AD18228CFE5B00EC69C7 /* WaypointsTableViewCell.swift in Sources */,
 				2800830A22853A5300DD2759 /* Trips+CoreDataClass copy.swift in Sources */,
 				2826AD1C228D289D00EC69C7 /* WaypointTableHeaderView.swift in Sources */,
+				289362A3228E318800F211FC /* EmptyWaypointView.swift in Sources */,
 				2800830B22853A5300DD2759 /* Waypoints+CoreDataClass copy.swift in Sources */,
 				2800830922853A5300DD2759 /* Trips+CoreDataProperties copy.swift in Sources */,
 				28BA2FE82282003800EF9070 /* Round_Trip.xcdatamodeld in Sources */,

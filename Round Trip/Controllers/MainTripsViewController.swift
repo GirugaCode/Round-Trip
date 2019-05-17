@@ -81,16 +81,10 @@ extension MainTripsViewController: UITableViewDelegate, UITableViewDataSource {
 //        self.navigationController?.pushViewController(NoWaypointsViewController(), animated: true)
         
         // If the trip has way points, push to WaypointsViewController
-        let selectedTrip = tripNames[indexPath.row]
-        if selectedTrip.waypoint?.count != 0 {
-            let waypointVC = WaypointsViewController()
-            waypointVC.allTrips = tripNames[indexPath.row]
-            self.navigationController?.pushViewController(waypointVC, animated: true)
-        } else {
-            let waypointVC = NoWaypointsViewController()
-            waypointVC.allTrips = tripNames[indexPath.row]
-            self.navigationController?.pushViewController(waypointVC, animated: true)
-        }
+        let waypointVC = WaypointsViewController()
+        waypointVC.allTrips = tripNames[indexPath.row]
+        self.navigationController?.pushViewController(waypointVC, animated: true)
+        
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
