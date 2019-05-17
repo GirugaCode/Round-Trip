@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Google Places API
-        GMSPlacesClient.provideAPIKey("AIzaSyBgiFqN47yXojaSjg9exhH7FKs6TSrcrvk")
+        GMSPlacesClient.provideAPIKey(Constants.apiKey)
         
         // Setting the view programmatically
         window = UIWindow(frame: UIScreen.main.bounds)
